@@ -17,7 +17,7 @@ function [MCU, MCUname] = init_mcu()
 % take in order to keep the system in good conditions).
 
 MCU = zeros(7,7);
-MCUname(1,1)= "TEST";
+MCUname(1,1)= "TESTMCU";
 MCU(2,1) = 24; %Default measurement rate. [n times per day]
 MCU(3,1) = 3.0; %Voltage at which the microcontroller operates. [V]
 MCU(4,1) = 0.1; %Current drawn when active. [mA/MHz]

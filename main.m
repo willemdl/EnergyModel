@@ -1,4 +1,4 @@
-close all
+%close all
 %% initialize parameters
 [T_alive, E_available, Sensor, Sensorname, MCU, MCUname, Transmission, Transmissionname] = init_main();
 

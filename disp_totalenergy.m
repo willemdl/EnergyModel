@@ -6,7 +6,7 @@ folder = '/Users/Willemdl/Desktop/TU Delft/BAP/Images';
 %% Plot of Total energy, Power and step size vs the time
 Time_Max = max(time);
 
-figure();
+figure('Name','geweldige plotjes','NumberTitle','off');
 subplot(3,1,1);
 plot(time(:), E_Sub(:,end-1));
 title('Total Energy usage');
@@ -97,10 +97,12 @@ E_Stages_Tot = (sum(K_Stages.*E_per_k(:,end),1)).';%each row is an stage
 E_Stages_Perc = (E_Stages_Tot(:) / E_Sub_Tot(end))*100;
 
 NoStages = size(Stages,1);%number of stages
-Stagesnames = strings(1,NoStages);
-for i =1:1:NoStages
-    Stagesnames(1,i) = "Stage "+ num2str(i);
-end
+% Stagesnames = strings(1,NoStages);
+% for i =1:1:NoStages
+%     Stagesnames(1,i) = "Stage "+ num2str(i);
+% end
+
+Stagesnames = ["Deep Sleep" "Wake Up" "Measurement" "Processing" "Transmission" ]
 %% Bar graph of energy and time in [%] per stage
 figure();
 y1 = T_Stages_Perc;
